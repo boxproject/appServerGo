@@ -938,12 +938,12 @@ func TxOperationHistory(ctx *gin.Context) {
 
 // 代理服务器获取账户余额
 func AssetForAgent(ctx *gin.Context) {
-	appid := ctx.Query("appid")
+	//appid := ctx.Query("appid")
 	page := ctx.DefaultQuery("page", "1")
 	limit := ctx.DefaultQuery("limit", "20")
 	p, _ := strconv.ParseInt(page, 10, 64)
 	l, _ := strconv.ParseInt(limit, 10, 64)
-	log.Debug("AssetForAgent...appid = %v", appid)
+	//log.Debug("AssetForAgent...appid = %v", appid)
 	//if appid == "" {
 	//	log.Error("AssetForAgent")
 	//	utils.RetError(ctx, ERROR_CODE)
