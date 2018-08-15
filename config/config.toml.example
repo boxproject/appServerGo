@@ -1,0 +1,28 @@
+ [server]
+    port = ":5001"
+    apiVersion = "v1"
+    mode = "debug"
+
+ [agent]
+    server = "https://127.0.0.1:19092"                  # 代理服务器地址
+    addFlow = "/agent/approvaladd"                      # 新建审批流
+    applyTx = "/agent/wtihdraw"                         # 申请转账
+    registration = "/agent/registadd"                   # 根节点申请注册
+    coinList = "/agent/coinlist"                        # 币种列表
+    tokenList = "/agent/tokenlist"                      # 代币列表
+    tokenDepositAddress = "/agent/status"               # 代币充值地址
+    flowStatus = "/agent/approvaldetail"                # flow哈希是否上链
+    approvaledInfos = "/agent/approvallist"             # 获取已通过审批的审批流列表
+    disallowflow = "/agent/approvalinvalid"             # 作废审批流
+    flowoplog = "/agent/approvaloplist"                 # 审批流操作日志
+ [database]
+    user = ""
+ 	password = ""
+ 	dbname = ""
+ 	host = ""
+ 	MaxOpen = 100
+ 	MaxIdle = 10
+ 	Enabled = true
+
+ [financeinfo]
+    fixed = 8                                          # 精度
