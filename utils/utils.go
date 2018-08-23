@@ -30,7 +30,7 @@ import (
 )
 
 func ReadJsonFile(ctx *gin.Context) map[string]string {
-	lang := ctx.GetHeader(" content-language")
+	lang := ctx.GetHeader("content-language")
 	if lang == "" {
 		lang = "zh-Hans"
 	}
